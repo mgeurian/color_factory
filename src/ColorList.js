@@ -14,7 +14,7 @@ function ColorList({colors}) {
               backgroundColor: `${c.name}`
             }}>
           </div>
-          <Link to={`/colors/${c.name.toLowerCase()}`}>{c.name}</Link>
+          <Link to={`/colors/${c.name}`}>{c.name}</Link>
         </div>
       ))}
 

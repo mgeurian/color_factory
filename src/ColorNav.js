@@ -4,11 +4,11 @@ import {NavLink} from "react-router-dom";
 
 function ColorNav({colors}) {
   const links = colors.map(c => (
-    <NavLink key={c.name} to={`/colors${c.name.toLowerCase()}`}>
+    <NavLink key={c.name} to={`/colors${c.name}`}>
       {c.name}
     </NavLink>
   ));
-  
+
   return (
     <nav>
       <NavLink exact to="/colors">Home</NavLink>

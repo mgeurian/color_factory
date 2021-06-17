@@ -1,36 +1,18 @@
 import './App.css';
-import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import ColorNav from './ColorNav.js';
-import ColorList from './ColorList';
-import Color from './Color';
-import NewColor from './NewColor';
-
-
+import Routes from './Routes';
 
 function App({colors}) {
   return (
+    <div>
     <BrowserRouter>
-      {/* <ColorNav colors={colors} />
-      <Switch>
-        <Route exact path='/colors'>
-          <ColorList colors={colors} />
-        </Route> */}
-        <Route exact path='/colors/red'>
-          <Color />
-        </Route>
-        {/* <Route exact path='/colors/new'>
-          <NewColor />
-        </Route> */}
-
-        {/* <Route path='/colors/:name'>
-          <Color />
-        </Route> */}
-
-        {/* <Redirect to="/colors" />
-      </Switch> */}
-    </BrowserRouter>
-
-
+      <ColorNav colors={colors} />
+      <div>
+        <Routes colors={colors} />
+      </div>
+    </BrowserRouter>      
+    </div>
   );
 }
 
@@ -45,7 +27,7 @@ export const colors = [
     name: "blue",
   },
   {
-    orange: "orange",
+    name: "orange",
   },
   {
     name: "green",

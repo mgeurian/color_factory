@@ -1,15 +1,22 @@
 import React from 'react'
+import { Link, Redirect } from 'react-router-dom';
 
-function Color() {
-  console.log("redpage");
+function Color({color}) {
+
+  if (!color) return <Redirect to="/colors" />
   return (
-    <div 
-      className="Color" 
-      style={{
-        backgroundColor: "red"
-      }}>
+    <div>
+
+      <div 
+        className="Color" 
+        style={{
+          backgroundColor: "red"
+        }}>
+      </div>
+      <Link to={`/colors`}>Home</Link>      
     </div>
-    // <button className="RemoveBox" onClick={remove}>X</button>
+
+
   )
 }
 
