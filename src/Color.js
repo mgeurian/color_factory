@@ -1,23 +1,25 @@
 import React from 'react'
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './Color.css';
 
-function Color({color}) {
+function Color({hex, color, history}) {
 
-  if (!color) return <Redirect to="/colors" />
+  if (!hex) {
+    history.push("/colors");
+  }
+
   return (
-    <div>
-
-      <div 
-        className="Color" 
-        style={{
-          backgroundColor: "red"
-        }}>
-      </div>
-      <Link to={`/colors`}>Home</Link>      
+    <div
+      className="Color" 
+      style={{
+        backgroundColor: hex
+      }}>
+      <p>{color}</p>
+      <p>
+        <Link to={`/`}>Home</Link>
+      </p>  
     </div>
-
-
   )
 }
 
-export default Color
+export default Color;

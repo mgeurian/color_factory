@@ -1,19 +1,14 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
-// import "./ColorBar.css";
+import { Link } from "react-router-dom";
+import "./ColorNav.css";
 
-function ColorNav({colors}) {
-  const links = colors.map(c => (
-    <NavLink key={c.name} to={`/colors${c.name}`}>
-      {c.name}
-    </NavLink>
-  ));
+function ColorNav() {
 
   return (
-    <nav>
-      <NavLink exact to="/colors">Home</NavLink>
-      {links}
-    </nav>
+    <div className="ColorNav">
+      <div>Welcome to the Color Factory</div>
+      <Link exact to="/colors/new">Add a color</Link>
+    </div>
   );
 }
 

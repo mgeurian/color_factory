@@ -1,0 +1,11 @@
+.ColorNav {
+  width: 100%;
+  height: 5em;
+  background-color: darkslategray;
+  color: lightskyblue;
+  margin-bottom: 10px;
+}
+
+.ColorNav div {
+  margin-bottom: 10px;
+}

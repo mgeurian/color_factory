@@ -1,0 +1,20 @@
+.ColorList {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.ColorList div div {
+  margin-bottom: 10px;
+}
+
+.ColorNav {
+  width: 100%;
+  background-color: darkslategray;
+  color: lightskyblue;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;  
+}
+
